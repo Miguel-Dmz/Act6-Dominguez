@@ -1,43 +1,42 @@
+import 'package:Dominguez1173/pagina_cinco.dart';
+import 'package:Dominguez1173/pagina_cuatro.dart';
+import 'package:Dominguez1173/pagina_dos.dart';
+import 'package:Dominguez1173/pagina_nueve.dart';
+import 'package:Dominguez1173/pagina_ocho.dart';
+import 'package:Dominguez1173/pagina_once.dart';
+import 'package:Dominguez1173/pagina_seis.dart';
+import 'package:Dominguez1173/pagina_siete.dart';
+import 'package:Dominguez1173/pagina_tres.dart';
+import 'package:Dominguez1173/pagina_uno.dart';
+import 'package:Dominguez1173/pantalla_diez.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      title: "Cisneros",
+      initialRoute: "/",
+      routes: {
+        "/": (context) => const Paginauno(),
+        '/pantalla dos': (context) => const PaginaDos(),
+        '/Pantalla tres': (context) => const Paginatres(),
+        '/pantalla cuatro': (context) => const Paginacuatro(),
+        '/pantalla cinco': (context) => const Paginacinco(),
+        '/pantalla seis': (context) => const Paginaseis(),
+        '/pantalla siete': (context) => const Paginasiete(),
+        '/pantalla ocho': (context) => const Paginaocho(),
+        '/pantalla nueve': (context) => const Pantallanueve(),
+        '/pantalla diez': (context) => const Paginadiez(),
+        '/pantalla once': (context) => const Paginaonce(),
+      },
     );
   }
 }
